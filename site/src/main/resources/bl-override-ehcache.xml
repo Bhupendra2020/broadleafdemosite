@@ -1,0 +1,124 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <defaultCache
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+    <cache
+        name="blStandardElements"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"
+        statistics="true">
+        <cacheEventListenerFactory class="org.broadleafcommerce.common.cache.engine.HydratedCacheEventListenerFactory"/>
+    </cache>
+
+    <cache
+        name="blProducts"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600">
+        <cacheEventListenerFactory class="org.broadleafcommerce.common.cache.engine.HydratedCacheEventListenerFactory"/>
+    </cache>
+
+    <cache
+        name="blCategories"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600">
+        <cacheEventListenerFactory class="org.broadleafcommerce.common.cache.engine.HydratedCacheEventListenerFactory"/>
+    </cache>
+
+    <cache
+        name="blOffers"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600">
+        <cacheEventListenerFactory class="org.broadleafcommerce.common.cache.engine.HydratedCacheEventListenerFactory"/>
+    </cache>
+
+    <cache
+        name="blInventoryElements"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+    <cache
+        name="org.hibernate.cache.internal.StandardQueryCache"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="false"
+        timeToLiveSeconds="3600"/>
+
+    <cache
+        name="query.Catalog"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="false"
+        timeToLiveSeconds="3600"/>
+
+    <cache
+        name="query.Offer"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="false"
+        timeToLiveSeconds="3600"/>
+
+    <cache
+        name="blOrderElements"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+     <cache
+        name="blCustomerElements"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+     <cache
+        name="generatedResourceCache"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+     <cache
+        name="blCMSElements"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+    <cache
+        name="blTranslationElements"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+    <cache
+        name="blConfigurationModuleElements"
+        maxElementsInMemory="1000000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToLiveSeconds="3600"/>
+
+     <!-- This is required by Hibernate to ensure that query caches return
+          corrrect results. It must contain at least as many entries as there are
+          DB tables. -->
+     <cache name="org.hibernate.cache.UpdateTimestampsCache"
+        maxElementsInMemory="1000000"
+        eternal="true"
+        overflowToDisk="true"/>
+        
+</ehcache>
