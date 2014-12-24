@@ -46,7 +46,7 @@ ADD testing /code/testing
 
 # Adding source, compile and package into a fat war
 RUN ["mvn", "clean"]
-RUN ["mvn", "install -DskipTests=true"]
+RUN ["mvn", "install"]
 
 WORKDIR /code/site/target
 
