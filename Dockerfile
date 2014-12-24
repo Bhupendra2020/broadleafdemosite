@@ -48,7 +48,7 @@ RUN ["mvn", "clean"]
 RUN ["mvn", "install"]
 
 #WORKDIR /code/site/target
-ADD mycompany.war /code/site/target
+ADD mycompany.war /code/site/target/mycompany.war
 
 # Add your webapp file into your docker image into Tomcat's webapps directory
 # Your webapp file must be at the same location as your Dockerfile
