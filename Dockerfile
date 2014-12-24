@@ -3,8 +3,6 @@
 FROM fnubhupen/oraclejava:7
 MAINTAINER Bhupendra Kumar <Bhupendra.kumar@softcrylic.com>
 
-
-
 #Install the Tomcat7
 RUN apt-get update && \
     apt-get install -yq --no-install-recommends wget pwgen ca-certificates && \
@@ -47,7 +45,7 @@ ADD testing /code/testing
 
 # Adding source, compile and package into a fat war
 RUN ["mvn", "clean"]
-RUN ["mvn", "package"]
+RUN ["mvn", "install"]
 
 #WORKDIR /code/site/target
 ADD mycompany.war /code/site/target
