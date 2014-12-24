@@ -51,8 +51,8 @@ ADD testing /code/testing
 # Your webapp file must be at the same location as your Dockerfile
 ADD mycompany.war /tomcat/webapps/mycompany.war
 
-#EXPOSE 8080
-#CMD ["/run.sh"]
+EXPOSE 8080
+CMD ["/run.sh"]
 
 
 
