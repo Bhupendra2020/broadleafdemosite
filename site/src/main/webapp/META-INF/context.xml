@@ -17,10 +17,10 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="root"
+              username="admin"
               password="1234"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/broadleaf"/>
+              url="jdbc:mysql://104.131.35.127:3306/broadleaf"/>
 
     <Resource name="jdbc/storage"
               auth="Container"
@@ -39,10 +39,10 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="root"
+              username="admin"
               password="1234"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/broadleaf"/>
+              url="jdbc:mysql://104.131.35.127:3306/broadleaf"/>
 
     <Resource name="jdbc/secure"
               auth="Container"
@@ -61,8 +61,8 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="root"
+              username="admin"
               password="1234"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/broadleaf"/>
+              url="jdbc:mysql://104.131.35.127:3306/broadleaf"/>
 </Context>
