@@ -1,3 +1,5 @@
+#Build this dockerfile :  docker build -t fnubhupen/testing:v1 git://github.com/Bhupendra2020/broadleafdemosite.git
+
 FROM fnubhupen/oraclejava:7
 MAINTAINER Bhupendra Kumar <Bhupendra.kumar@softcrylic.com>
 
