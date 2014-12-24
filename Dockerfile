@@ -11,7 +11,14 @@ WORKDIR /code
 
 # Prepare by downloading dependencies
 ADD pom.xml /code/pom.xml
-ADD src /code/src
+ADD build.xml /code/build.xml
+ADD admin /code/admin
+ADD core /code/core
+ADD site /code/site
+ADD lib /code/lib
+ADD testing /code/testing
+
+#Download Maven Dependencies
 RUN ["mvn", "dependency:resolve"]
 RUN ["mvn", "verify"]
 
