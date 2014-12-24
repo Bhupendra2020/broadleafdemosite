@@ -39,5 +39,9 @@ ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
-EXPOSE 8080
-CMD ["/run.sh"]
+# Add your webapp file into your docker image into Tomcat's webapps directory
+# Your webapp file must be at the same location as your Dockerfile
+ADD /site/target/mycompany.war /var/lib/tomcat7/webapps/
+
+#EXPOSE 8080
+#CMD ["/run.sh"]
