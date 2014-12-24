@@ -19,8 +19,8 @@ ADD lib /code/lib
 ADD testing /code/testing
 
 #Download Maven Dependencies
-RUN ["mvn", "dependency:resolve"]
-RUN ["mvn", "verify"]
+#RUN ["mvn", "dependency:resolve"]
+#RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat war
 RUN ["mvn", "clean"]
