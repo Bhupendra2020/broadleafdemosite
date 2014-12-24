@@ -52,7 +52,7 @@ RUN ["mvn", "install"]
 
 # Add your webapp file into your docker image into Tomcat's webapps directory
 # Your webapp file must be at the same location as your Dockerfile
-ADD site/target/mycompany.war /tomcat7/webapps/
+ADD site/target/mycompany.war /tomcat/webapps/
 
 #EXPOSE 8080
 #CMD ["/run.sh"]
