@@ -29,7 +29,7 @@ RUN chmod +x /*.sh
 RUN apt-get update
 RUN apt-get install -y maven
 
-#WORKDIR /code
+WORKDIR /code
 
 # Prepare by downloading dependencies
 ADD pom.xml /code/pom.xml
@@ -48,7 +48,7 @@ ADD testing /code/testing
 RUN ["mvn", "clean"]
 RUN ["mvn", "install"]
 
-
+WORKDIR /
 
 # Add your webapp file into your docker image into Tomcat's webapps directory
 # Your webapp file must be at the same location as your Dockerfile
