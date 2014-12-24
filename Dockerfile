@@ -1,6 +1,6 @@
 #Build this dockerfile :  docker build -t fnubhupen/broadleaf git://github.com/Bhupendra2020/broadleafdemosite.git
 
-FROM ubuntu:trusty
+FROM fnubhupen/oraclejava:7
 MAINTAINER Bhupendra Kumar <Bhupendra.kumar@softcrylic.com>
 
 # update package respository
@@ -10,15 +10,11 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise-security main universe" >
 RUN apt-get update
 
 # install java, tomcat7
-RUN apt-get install -y default-jdk
 RUN apt-get install -y tomcat7
 
 RUN mkdir /usr/share/tomcat7/logs/
 RUN mkdir /usr/share/tomcat7/temp/
 
-# set tomcat environment variables
-ENV JAVA_HOME=/usr/lib/jvm/default-java
-ENV JRE_HOME=/usr/lib/jvm/default-java/jre
 ENV CATALINA_HOME=/usr/share/tomcat7/
 
 #Install the Tomcat7
