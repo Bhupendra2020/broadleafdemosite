@@ -44,15 +44,15 @@ ADD testing /code/testing
 #RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat war
-RUN ["mvn", "clean"]
-RUN ["mvn", "install"]
+#RUN ["mvn", "clean"]
+#RUN ["mvn", "install"]
 
 #WORKDIR /code
-COPY /code/site/target/mycompany.war /tomcat/webapps/mycompany.war
+ADD mycompany.war /code/mycompany.war
 
 # Add your webapp file into your docker image into Tomcat's webapps directory
 # Your webapp file must be at the same location as your Dockerfile
-#ADD mycompany.war /tomcat/webapps/
+ADD /code/mycompany.war /tomcat/webapps/
 
 #EXPOSE 8080
 #CMD ["/run.sh"]
