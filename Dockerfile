@@ -14,8 +14,8 @@ RUN ["mvn", "dependency:resolve"]
 RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat war
-
-RUN ["mvn", "package"]
+RUN ["mvn", "clean"]
+RUN ["mvn", "install"]
 
 #Install the Tomcat7
 
