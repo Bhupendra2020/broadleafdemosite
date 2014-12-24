@@ -48,11 +48,11 @@ ADD testing /code/testing
 RUN ["mvn", "clean"]
 RUN ["mvn", "install"]
 
-WORKDIR /
+WORKDIR /code/site
 
 # Add your webapp file into your docker image into Tomcat's webapps directory
 # Your webapp file must be at the same location as your Dockerfile
-COPY /code/target/mycompany.war /tomcat/webapps/
+ADD target/mycompany.war /tomcat/webapps/
 
 #EXPOSE 8080
 #CMD ["/run.sh"]
