@@ -24,32 +24,8 @@ ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
-# Install maven
-RUN apt-get update
-RUN apt-get install -y maven
 
-WORKDIR /code
-
-# Prepare by downloading dependencies
-ADD pom.xml /code/pom.xml
-ADD build.xml /code/build.xml
-ADD admin /code/admin
-ADD core /code/core
-ADD site /code/site
-ADD lib /code/lib
-ADD testing /code/testing
-
-#Download Maven Dependencies
-#RUN ["mvn", "dependency:resolve"]
-#RUN ["mvn", "verify"]
-
-# Adding source, compile and package into a fat war
-#RUN ["mvn", "clean"]
-#RUN ["mvn", "install"]
-
-# Add your webapp file into your docker image into Tomcat's webapps directory
-# Your webapp file must be at the same location as your Dockerfile
-ADD mycompany.war /tomcat/webapps/mycompany.war
+ADD site/deployement/site-1.0.war /tomcat/webapps/site-1.0.war
 
 EXPOSE 8080
 CMD ["/run.sh"]
