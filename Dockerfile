@@ -49,7 +49,7 @@ ADD testing /code/testing
 
 # Add your webapp file into your docker image into Tomcat's webapps directory
 # Your webapp file must be at the same location as your Dockerfile
-ADD mycompany.war /tomcat/webapps/mycompany.war
+ADD ./site/target/mycompany.war /tomcat/webapps/mycompany.war
 
 EXPOSE 8080
 CMD ["/run.sh"]
