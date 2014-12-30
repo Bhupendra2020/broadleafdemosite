@@ -5,7 +5,8 @@
             <div th:if="${customer.anonymous}"  th:remove="tag">
 
                 <a class="account" th:href="@{/login}">
-                    <span th:text="#{home.login}">Login</span>
+                    <!-- <span th:text="#{home.login}">Login</span> -->
+                    <span th:text="#{home.login}">Login as Bhupendra</span>
                 </a>
                 &nbsp;|&nbsp; 
                 <a class="account" th:href="@{/register}">
