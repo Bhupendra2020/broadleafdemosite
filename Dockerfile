@@ -9,9 +9,9 @@ RUN sudo apt-get update && \
     sudo apt-get clean && \
     sudo rm -rf /var/lib/apt/lists/*
 
-ENV TOMCAT_MAJOR_VERSION 7
-ENV TOMCAT_MINOR_VERSION 7.0.57
-ENV CATALINA_HOME /tomcat
+ENV sudo TOMCAT_MAJOR_VERSION 7
+ENV sudo TOMCAT_MINOR_VERSION 7.0.57
+ENV sudo CATALINA_HOME /tomcat
 
 # INSTALL TOMCAT
 RUN sudo wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION}/v${TOMCAT_MINOR_VERSION}/bin/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz && \
