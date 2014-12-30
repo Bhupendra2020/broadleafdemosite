@@ -20,9 +20,9 @@ RUN sudo wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VE
     sudo rm apache-tomcat-*.tar.gz && \
     sudo mv apache-tomcat* tomcat
 
-ADD sudo ./create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
-ADD sudo ./setenv.sh /${CATALINA_HOME}/bin/setenv.sh
-ADD sudo ./run.sh /run.sh
+COPY sudo /create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
+ADD sudo /setenv.sh /${CATALINA_HOME}/bin/setenv.sh
+ADD sudo /run.sh /run.sh
 RUN sudo chmod +x /*.sh
 
 
