@@ -21,6 +21,7 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     mv apache-tomcat* tomcat
 
 ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
+ADD setenv.sh /${CATALINA_HOME}/bin/setenv.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
@@ -44,8 +45,8 @@ ADD testing /code/testing
 #RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat war
-#RUN ["mvn", "clean"]
-#RUN ["mvn", "install"]
+RUN ["mvn", "clean"]
+RUN ["mvn", "install"]
 
 # Add your webapp file into your docker image into Tomcat's webapps directory
 # Your webapp file must be at the same location as your Dockerfile
