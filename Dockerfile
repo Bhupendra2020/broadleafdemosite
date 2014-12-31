@@ -25,8 +25,7 @@ ADD setenv.sh /${CATALINA_HOME}/bin/setenv.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
-RUN mkdir /deploy
-COPY /deploy /tomcat/webapps
+VOLUME /tomcat/webapps
 #ADD mycompany.war /tomcat/webapps/mycompany.war
 
 EXPOSE 8080
