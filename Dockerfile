@@ -20,7 +20,7 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     rm apache-tomcat-*.tar.gz && \
     mv apache-tomcat* tomcat
 
-ADD /var/lib/jenkins/workspace/BroafLeaf/create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
+ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 ADD setenv.sh /${CATALINA_HOME}/bin/setenv.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
