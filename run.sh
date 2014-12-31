@@ -7,7 +7,8 @@ if [ -d $DIR ]; then
   for i in $DIR/*.war; do
      file=$(basename $i)
      echo "Linking $i --> /tomcat/webapps/$file"
-     ln -s $i /tomcat/webapps/$file
+     #ln -s $i /tomcat/webapps/$file
+     cp $file /tomcat/webapps/$file
   done
 fi
 
