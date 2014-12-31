@@ -26,7 +26,10 @@ ADD setenv.sh /${CATALINA_HOME}/bin/setenv.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
-VOLUME /tomcat/webapps
+# Remove unneeded apps
+RUN rm -rf /tomcat/webapps/examples /tomcat/webapps/docs 
+
+#VOLUME /tomcat/webapps
 #ADD mycompany.war /tomcat/webapps/mycompany.war
 
 EXPOSE 8080
