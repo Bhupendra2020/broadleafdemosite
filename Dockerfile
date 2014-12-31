@@ -26,7 +26,7 @@ ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
 
-ADD mycompany.war /tomcat/webapps/mycompany.war
+#ADD mycompany.war /tomcat/webapps/mycompany.war
 
 EXPOSE 8080
 CMD [" /run.sh"]
