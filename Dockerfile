@@ -29,7 +29,7 @@ VOLUME /tomcat/webapps
 #ADD mycompany.war /tomcat/webapps/mycompany.war
 
 EXPOSE 8080
-CMD [" /run.sh"]
+CMD ["/run.sh"]
 
 
 
