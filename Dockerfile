@@ -26,7 +26,7 @@ ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
 RUN mkdir /deploy
-RUN cp /deploy /tomcat/webapps
+COPY /deploy /tomcat/webapps
 #ADD mycompany.war /tomcat/webapps/mycompany.war
 
 EXPOSE 8080
