@@ -29,8 +29,8 @@ RUN chmod +x /*.sh
 # Remove unneeded apps
 RUN rm -rf /tomcat/webapps/examples /tomcat/webapps/docs 
 
-VOLUME /maven
-#ADD mycompany.war /tomcat/webapps/mycompany.war
+#VOLUME /maven
+ADD mycompany.war /tomcat/webapps/mycompany.war
 
 EXPOSE 8080
 CMD ["/run.sh"]
