@@ -38,9 +38,9 @@ html, button, input, select, textarea {
 body {
 	margin: 0;
 	font: 12px/18px Georgia, serif;
-	/* color: #655c5a; */
-	color: #000;
-	background: url(../img/canvas.jpg) repeat;
+	color: #655c5a; 
+	background-color: #000; /* Change to black */
+	/* background: url(../img/canvas.jpg) repeat; */
 }
 
 ::-moz-selection {
