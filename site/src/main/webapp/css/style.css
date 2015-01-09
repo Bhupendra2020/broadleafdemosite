@@ -39,9 +39,9 @@ body {
 	margin: 0;
 	font: 12px/18px Georgia, serif;
 	color: #655c5a; 
-/*	 background-color: #000;  /* Change to black */
+	background-color: #000;  /* Change to black */
 	
-	background-color: #ff9;  /*Change to Yellew */
+/*	background-color: #ff9;  Change to Yellew */
 	/* background: url(../img/canvas.jpg) repeat; */
 }
 
