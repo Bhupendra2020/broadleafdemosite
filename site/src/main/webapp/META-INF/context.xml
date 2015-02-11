@@ -20,7 +20,7 @@
               username="admin"
               password="1234"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://104.131.35.127:3306/broadleaf"/>
+              url="jdbc:mysql://54.172.215.151:3306/broadleaf"/>
 
     <Resource name="jdbc/storage"
               auth="Container"
@@ -42,7 +42,7 @@
               username="admin"
               password="1234"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://104.131.35.127:3306/broadleaf"/>
+              url="jdbc:mysql://54.172.215.151:3306/broadleaf"/>
 
     <Resource name="jdbc/secure"
               auth="Container"
@@ -64,5 +64,5 @@
               username="admin"
               password="1234"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://104.131.35.127:3306/broadleaf"/>
+              url="jdbc:mysql://54.172.215.151:3306/broadleaf"/>
 </Context>
