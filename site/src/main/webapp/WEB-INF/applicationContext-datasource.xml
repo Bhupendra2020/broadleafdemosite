@@ -31,7 +31,7 @@
 
     <jee:jndi-lookup id="webStorageDS" jndi-name="jdbc/storage"/> -->
     
-    <!-- <bean id="webDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
+   <bean id="webDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
 	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
 	    <property name="url" value="jdbc:mysql://broadleaf-poc.ct2b8j7fkpms.us-east-1.rds.amazonaws.com:3306/broadleaf" />
 	    <property name="username" value="broadleafdbuser" />
@@ -50,27 +50,27 @@
 	    <property name="url" value="jdbc:mysql://broadleaf-poc.ct2b8j7fkpms.us-east-1.rds.amazonaws.com:3306/broadleaf" />
 	    <property name="username" value="broadleafdbuser" />
 	    <property name="password" value="DBRDSpoc" />
+	</bean>
+	
+	<!-- <bean id="webDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
+	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	    <property name="url" value="jdbc:mysql://54.172.215.151:3306/broadleaf" />
+	    <property name="username" value="admin" />
+	    <property name="password" value="1234" />
+	</bean>
+	
+	<bean id="webSecureDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
+	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	    <property name="url" value="jdbc:mysql://54.172.215.151:3306/broadleaf" />
+	    <property name="username" value="admin" />
+	    <property name="password" value="1234" />
+	</bean>
+	
+	<bean id="webStorageDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
+	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	    <property name="url" value="jdbc:mysql://54.172.215.151:3306/broadleaf" />
+	    <property name="username" value="admin" />
+	    <property name="password" value="1234" />
 	</bean> -->
-	
-	<bean id="webDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
-	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-	    <property name="url" value="jdbc:mysql://54.172.215.151:3306/broadleaf" />
-	    <property name="username" value="admin" />
-	    <property name="password" value="1234" />
-	</bean>
-	
-	<bean id="webSecureDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
-	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-	    <property name="url" value="jdbc:mysql://54.172.215.151:3306/broadleaf" />
-	    <property name="username" value="admin" />
-	    <property name="password" value="1234" />
-	</bean>
-	
-	<bean id="webStorageDS" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
-	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-	    <property name="url" value="jdbc:mysql://54.172.215.151:3306/broadleaf" />
-	    <property name="username" value="admin" />
-	    <property name="password" value="1234" />
-	</bean>
     
 </beans>
